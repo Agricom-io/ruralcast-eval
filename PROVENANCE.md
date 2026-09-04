@@ -1,5 +1,7 @@
 # Data provenance — bundled Slovenian series
 
+Checksums below are of the files **exactly as published in this repository** (verify with `shasum -a 256 data/*.csv`).
+
 Both files under `data/` are public open data, retrieved **2026-09-04** for the RURALCAST
 pre-submission feasibility back-test (SMART ERA 2nd Open Call). Nothing here is farm-level
 or personal data.
@@ -18,11 +20,12 @@ or personal data.
 | Native frequency | **weekly** (`beginDate`/`endDate` week window) |
 | Period retrieved | 2015-11-16 → 2026-08-24 |
 | Rows after transformation | 559 |
+| File size as published | 10,079 bytes |
 | Unit | EUR / tonne |
 | Licence / reuse | European Commission open data, free reuse with attribution |
 | Retrieval date | 2026-09-04 |
-| md5 | `2bce7e684cbe71174ed1e28b28cf2ea1` |
-| sha256 | `8fdc1960c1179d10564ad49b123367dec78e12dd92d1485df94062bbab25ce7b` |
+| md5 | `3106469d86a156e9da754f291b2356f7` |
+| sha256 | `24585dc1a17acddfe63d938a659f0ced9a2e1851032b31b00a1404559dccc57c` |
 
 **Transformation log**
 1. One GET per year; HTTP 404 from this API means "no data for these parameters" and is skipped, not treated as an error.
@@ -55,11 +58,12 @@ python -m ruralcast_adapters.dgagri --years 2015 2016 2017 2018 2019 2020 2021 2
 | Geographic coverage | Slovenia, national |
 | Native frequency | **monthly** |
 | Period retrieved | 2015M01 → 2026M06 (138 months, no gaps) |
+| File size as published | 4,854 bytes |
 | Unit | Index, **month / average of the year 2020 = 100** — an index, not a price level |
 | Licence / reuse | SURS open data, CC BY 4.0 |
 | Retrieval date | 2026-09-04 |
-| md5 | `6d82e2b805a589e8f4f0b118b96d3f95` |
-| sha256 | `a6e5581722245e0ddc59866ceb08c7ccb0d82f374ef9890fb5ab95d048ad851f` |
+| md5 | `bf1579233804d8076ad34daee2b5f4ed` |
+| sha256 | `247185d72268b5aba4f3c35ff8608b8e030dde2c2326bef1be021beff49d07cd` |
 
 **Transformation log**
 1. Single POST with the query above; response read as pxweb `json`, BOM stripped.
